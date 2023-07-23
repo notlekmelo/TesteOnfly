@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "projects": {
+    "status-invest": {
+      "type": "library",
+      "root": "libs/status-invest",
+      "entryFile": "index",
+      "sourceRoot": "libs/status-invest/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/status-invest/tsconfig.lib.json"
+      }
+    },
+    "email": {
+      "type": "library",
+      "root": "libs/email",
+      "entryFile": "index",
+      "sourceRoot": "libs/email/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/email/tsconfig.lib.json"
+      }
+    },
+    "authentication": {
+      "type": "library",
+      "root": "libs/authentication",
+      "entryFile": "index",
+      "sourceRoot": "libs/authentication/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/authentication/tsconfig.lib.json"
+      }
+    },
+    "test": {
+      "type": "library",
+      "root": "libs/test",
+      "entryFile": "index",
+      "sourceRoot": "libs/test/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/test/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": false,
+    "assets": [
+      {
+        "outDir": "./dist/assets",
+        "include": "../assets/**/*"
+      },
+      {
+        "outDir": "./dist/src",
+        "include": "config/*"
+      }
+    ],
+    "plugins": [
+      {
+        "name": "@nestjs/swagger",
+        "options": {
+          "introspectComments": true,
+          "dtoFileNameSuffix": [
+            "dto",
+            "model",
+            "output",
+            "entity",
+            "response",
+            "body",
+            "input",
+            "header"
+          ]
+        }
+      }
+    ]
+  }
+}

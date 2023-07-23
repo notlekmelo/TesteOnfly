@@ -1,0 +1,11 @@
+apps:
+  - name: TesteOnfly
+    script: './src/main.js'
+    instance_var: 'INSTANCE_ID'
+    max_memory_restart: 300M
+    exec_mode: 'fork'
+    instances: 1
+    ignore_watch: ['node_modules']
+    env:
+      NODE_ENV: 'development'
+    port: 3100
