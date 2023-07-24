@@ -10,8 +10,8 @@ const remetente = Email.createTransport({
     user: emailPadrao,
     pass: "",
     clientId:
-      "329376374938-8p0fp003khn0fnv9ionouksvgb3t8blt.apps.googleusercontent.com",
-    clientSecret: "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",
+      "",
+    clientSecret: "",
     refreshToken:
       "1//04N9npcsmphtnCgYIARAAGAQSNwF-L9IrbXicCkGmzDVyg-LeyvR8N_H3QiHzdOx4kUamYnXm5xZB9CUM6pIRanxtONJwd7nRd0s",
     accessToken:
